@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Fonts */
+  --font-medium: 400;
+  --font-bold: 700;
+  --font-family: "Kumbh Sans", sans-serif;
+
+  /* Primary Colors */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* Neutral Colors */
+  --dark-gray: hsl(0, 0%, 59%);
+  --dark-gray-alpha: hsla(0, 0%, 59%, 0.205);
+  --pure-white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: 18px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg),
+    linear-gradient(var(--dark-cyan), var(--dark-cyan));
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: cover, cover;
+  background-position: right 40vw bottom 50vh, left 40vw top 50vh;
+}
+
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.card {
+  width: 87%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--pure-white);
+}
+
+/* User Part*/
+.card__user {
+  border-bottom: 1px solid var(--dark-gray-alpha);
+}
+
+.user__background {
+  background-image: url(./images/bg-pattern-card.svg);
+  padding-top: 7.5em;
+}
+
+.user__infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.2em;
+}
+
+.user__container-photo {
+  margin-top: -53px;
+}
+
+.user__photo {
+  /* width: 90%; */
+  border-radius: 50%;
+  border: 0.25rem solid var(--pure-white);
+  margin: 0 auto;
+  display: block;
+}
+
+.infos__name {
+  color: var(--desaturated-blue);
+  font-size: 0.95rem;
+  line-height: 0.5;
+}
+.infos__age {
+  color: var(--dark-grayish-blue);
+  font-weight: lighter;
+  font-size: 0.95rem;
+  padding-left: 0.2em;
+}
+.infos__city {
+  color: var(--dark-grayish-blue);
+  font-size: 0.75rem;
+  font-weight: lighter;
+  margin-bottom: 1.7em;
+}
+
+/* Social medias Part*/
+.card__social-media {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.2em 0 0.8em;
+}
+
+.social-media__followers,
+.social-media__likes,
+.social-media__photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.followers-number,
+.likes-number,
+.photos-number {
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+  color: var(--desaturated-blue);
+  margin-bottom: 0.3em;
+}
+
+.followers-name,
+.likes-name,
+.photos-name {
+  font-size: 0.5rem;
+  font-weight: lighter;
+  letter-spacing: 0.2em;
+  color: var(--dark-grayish-blue);
+}
